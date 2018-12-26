@@ -8,42 +8,42 @@ class Calculator extends StatefulWidget {
 }
 
 class _CalculatorState extends State<Calculator> {
-  double sayi1 = 0, sayi2 = 0, sonuc = 0;
-  double kok = 0;
+  double num1 = 0, num2 = 0, result = 0;
+  double root = 0;
 
   final TextEditingController t1 = new TextEditingController(text: "");
   final TextEditingController t2 = new TextEditingController(text: "");
 
   void addition() {
     setState(() {
-      sayi1 = double.parse(t1.text);
-      sayi2 = double.parse(t2.text);
-      sonuc = sayi1 + sayi2;
+      num1 = double.parse(t1.text);
+      num2 = double.parse(t2.text);
+      result = num1 + num2;
     });
   }
 
   void subtraction() {
     setState(() {
-      sayi1 = double.parse(t1.text);
-      sayi2 = double.parse(t2.text);
+      num1 = double.parse(t1.text);
+      num2 = double.parse(t2.text);
 
-      sonuc = sayi1 - sayi2;
+      result = num1 - num2;
     });
   }
 
   void multiplication() {
     setState(() {
-      sayi1 = double.parse(t1.text);
-      sayi2 = double.parse(t2.text);
-      sonuc = sayi1 * sayi2;
+      num1 = double.parse(t1.text);
+      num2 = double.parse(t2.text);
+      result = num1 * num2;
     });
   }
 
   void division() {
     setState(() {
-      sayi1 = double.parse(t1.text);
-      sayi2 = double.parse(t2.text);
-      sonuc = sayi1 / sayi2;
+      num1 = double.parse(t1.text);
+      num2 = double.parse(t2.text);
+      result = num1 / num2;
     });
   }
 
@@ -51,23 +51,23 @@ class _CalculatorState extends State<Calculator> {
     setState(() {
       t1.text = "";
       t2.text = "";
-      sonuc = 0;
+      result = 0;
     });
   }
 
   void usal() {
     setState(() {
-      sayi1 = double.parse(t1.text);
-      sayi2 = double.parse(t2.text);
-      sonuc = pow(sayi1, sayi2);
+      num1 = double.parse(t1.text);
+      num2 = double.parse(t2.text);
+      result = pow(num1, num2);
     });
   }
 
   void kokal() {
     setState(() {
-      sayi1 = double.parse(t1.text);
-      kok = double.parse(t2.text);
-      sonuc = pow(sayi1, 1 / kok);
+      num1 = double.parse(t1.text);
+      root = double.parse(t2.text);
+      result = pow(num1, 1 / root);
     });
   }
 
@@ -132,7 +132,7 @@ class _CalculatorState extends State<Calculator> {
                             height: 50.0,
                             child: Center(
                               child: new Text(
-                                "$sonuc",
+                                "$result",
                                 style: TextStyle(
                                   fontSize: 25.0,
                                   color: Colors.yellow,
