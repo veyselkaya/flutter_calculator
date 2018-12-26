@@ -14,7 +14,7 @@ class _CalculatorState extends State<Calculator> {
   final TextEditingController t1 = new TextEditingController(text: "");
   final TextEditingController t2 = new TextEditingController(text: "");
 
-  void toplama() {
+  void addition() {
     setState(() {
       sayi1 = double.parse(t1.text);
       sayi2 = double.parse(t2.text);
@@ -22,7 +22,7 @@ class _CalculatorState extends State<Calculator> {
     });
   }
 
-  void cikarma() {
+  void removal() {
     setState(() {
       sayi1 = double.parse(t1.text);
       sayi2 = double.parse(t2.text);
@@ -31,7 +31,7 @@ class _CalculatorState extends State<Calculator> {
     });
   }
 
-  void carpma() {
+  void multiplication() {
     setState(() {
       sayi1 = double.parse(t1.text);
       sayi2 = double.parse(t2.text);
@@ -39,7 +39,7 @@ class _CalculatorState extends State<Calculator> {
     });
   }
 
-  void bolme() {
+  void division() {
     setState(() {
       sayi1 = double.parse(t1.text);
       sayi2 = double.parse(t2.text);
@@ -47,7 +47,7 @@ class _CalculatorState extends State<Calculator> {
     });
   }
 
-  void temizle() {
+  void remove() {
     setState(() {
       t1.text = "";
       t2.text = "";
@@ -74,6 +74,7 @@ class _CalculatorState extends State<Calculator> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       appBar: AppBar(
         title: Text('Calculator'),
       ),
@@ -176,7 +177,7 @@ class _CalculatorState extends State<Calculator> {
                               isDense: true,
                               hintText: "write second number",
                               labelText: "second number",
-                              suffixText: "second number.",
+                              suffixText: "second number",
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.only(
                                   topLeft: Radius.circular(10.0),
@@ -200,7 +201,7 @@ class _CalculatorState extends State<Calculator> {
 
                                   ),
                                   splashColor: Colors.yellow,
-                                  onPressed: toplama,
+                                  onPressed: addition,
                                 ),
                               ),
 
@@ -211,7 +212,7 @@ class _CalculatorState extends State<Calculator> {
                                   color: Colors.red,
                                   
                                   ), 
-                                  onPressed: cikarma,
+                                  onPressed: removal,
                               ),
                                ),
                             ],
@@ -229,7 +230,7 @@ class _CalculatorState extends State<Calculator> {
                                   color: Colors.red,
                                   
                                   ), 
-                                  onPressed: carpma,
+                                  onPressed: multiplication,
                               ),
                                ),
                               CircleAvatar(
@@ -239,7 +240,7 @@ class _CalculatorState extends State<Calculator> {
                                   color: Colors.red,
                                   
                                   ), 
-                                  onPressed: bolme,
+                                  onPressed: division,
                                 ),
                               ),
                             ],
@@ -291,7 +292,7 @@ class _CalculatorState extends State<Calculator> {
                                   ],
                                 ),
                                 color: Colors.red,
-                                onPressed: temizle,
+                                onPressed: remove,
                               ),
                             ],
                           ),

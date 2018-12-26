@@ -7,8 +7,10 @@ import 'package:flutter/cupertino.dart';
 
 void main() => runApp(
   MaterialApp(
+    debugShowCheckedModeBanner: false,
     theme: ThemeData(
       hintColor: Colors.black,
+      
       inputDecorationTheme: InputDecorationTheme(
       hintStyle: TextStyle(
         color: Colors.yellow,
@@ -33,6 +35,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       appBar: AppBar(
         title: Text('Flutter Mathematics'),
       ),
