@@ -176,7 +176,7 @@ class _CalculatorState extends State<Calculator> {
                               isDense: true,
                               hintText: "write second number",
                               labelText: "second number",
-                              suffixText: "second number",
+                              suffixText: "second number.",
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.only(
                                   topLeft: Radius.circular(10.0),
