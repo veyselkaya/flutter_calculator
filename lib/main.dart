@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './ikincisayfa.dart';
+import './secondPage.dart';
 import './calculator.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -82,7 +82,7 @@ class _MyAppState extends State<MyApp> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => IkinciSayfa()));
+                                builder: (context) => SecondPage()));
                       },
                     ),
                   ),

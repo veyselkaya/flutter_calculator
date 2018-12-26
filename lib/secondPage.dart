@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
-class IkinciSayfa extends StatefulWidget {
+class SecondPage extends StatefulWidget {
   @override
-  _IkinciSayfaState createState() => _IkinciSayfaState();
+  _SecondPageState createState() => _SecondPageState();
 }
 
-class _IkinciSayfaState extends State<IkinciSayfa> {
+class _SecondPageState extends State<SecondPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
