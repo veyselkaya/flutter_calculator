@@ -22,7 +22,7 @@ class _CalculatorState extends State<Calculator> {
     });
   }
 
-  void removal() {
+  void subtraction() {
     setState(() {
       sayi1 = double.parse(t1.text);
       sayi2 = double.parse(t2.text);
@@ -212,7 +212,7 @@ class _CalculatorState extends State<Calculator> {
                                   color: Colors.red,
                                   
                                   ), 
-                                  onPressed: removal,
+                                  onPressed: subtraction,
                               ),
                                ),
                             ],
